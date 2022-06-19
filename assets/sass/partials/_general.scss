@@ -1,0 +1,25 @@
+body {
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "DM Serif Display", serif;
+    font-weight: $weight400;
+}
+
+p,
+a {
+    font-family: "Karla", sans-serif;
+    font-size: 1rem;
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}

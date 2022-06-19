@@ -1,0 +1,121 @@
+.main__ {
+    &container {
+        @extend %container-pdg;
+        @include bd;
+        // padding-top: 5rem;
+    }
+
+    &header {
+        // @include bd(green);
+        margin-bottom: 2rem;
+        position: relative;
+    }
+
+    &list- {
+        &container {
+            --gap: 3rem;
+            // display: flex;
+            // @include bd(green);
+            @include pdg(2.5rem 0 7rem);
+            @include flex($jfy: center, $align: flex-start);
+        }
+
+        &item {
+            // @include bd(red);
+            flex: 1 1 calc(100% / 4);
+            min-width: 280px;
+            max-width: 380px;
+            @include ta(center);
+
+            &:first-of-type {
+                // @include bd(blue);
+                flex: 100%;
+                max-width: 100%;
+            }
+
+            &:last-of-type {
+                // @include bd;
+
+                @media (max-width: 1067px) {
+                    @include ta(center);
+
+                    & > img {
+                        @include mg(0 auto);
+                    }
+                }
+            }
+
+            @media (min-width: $small-screen) {
+                @include ta(left);
+            }
+
+            @media (max-width: 702px) {
+                @include ta(center);
+
+                & > img {
+                    @include mg(0 auto);
+                }
+            }
+        }
+
+        &icon {
+            // @include bd;
+            @include mg(0 auto);
+
+            @media (min-width: $small-screen) {
+                @include mg(0);
+            }
+        }
+
+        &heading {
+            // @include bd(yellow);
+            @include mg(2rem 0 1rem);
+            font-size: 1.65rem;
+        }
+
+        &copy {
+            color: $dark-grayish-violet;
+            font-size: 0.85rem;
+            // @include bd(purple)
+        }
+    }
+
+    &our-work-container {
+        color: $white;
+
+        // @include bd;
+        @include mg(5rem auto);
+        // @extend %container-pdg;
+        @include pdg(4rem 2rem);
+        background: url("../images/bg-pattern-how-we-work-mobile.svg") top right no-repeat;
+        background-color: $dark-violet;
+        @include flex($jfy: center);
+
+        @media (min-width: $small-screen) {
+            background-image: url("../images/bg-pattern-how-we-work-desktop.svg");
+            @include ta(left);
+            @include pdg(3rem 3.5rem);
+            @include flex($jfy: space-between);
+        }
+
+        @media (max-width: 740px) {
+            flex-flow: column wrap;
+            @include ta(center);
+        }
+
+        & > {
+            h2 {
+                flex: 1 1 53%;
+                max-width: 500px;
+                line-height: 1;
+                @include mg(0 0 2rem);
+                // @include bd;
+            }
+
+            div {
+                // @include bd;
+                @include ta(center);
+            }
+        }
+    }
+}

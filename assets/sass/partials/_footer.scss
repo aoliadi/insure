@@ -1,0 +1,98 @@
+.footer__ {
+    &container {
+        background: url("../images/bg-pattern-footer-mobile.svg") top left no-repeat;
+        background-color: $very-light-gray;
+        // background-color: hsl(0, 0%, 98%) .5;
+        // @include bd;
+        // @include pdg(2rem 0);
+        @extend %container-pdg;
+        text-transform: uppercase;
+        // @include bd;
+
+        @media (min-width: $small-screen) {
+            background-image: url("../images/bg-pattern-footer-desktop.svg");
+            // width: 100vw;
+        }
+
+        & > div {
+            & > section {
+                // @include bd(blue);
+                @include flex($jfy: space-between, $align: flex-start);
+
+                &:first-of-type {
+                    // @include bd(blue);
+
+                    border-bottom: 2px solid $dark-grayish-violet;
+                    // border-bottom: 2px solid $very-light-gray;
+                    @include mg(0 0 2rem);
+                    @include pdg(1rem 0 2rem);
+
+                    & > * {
+                        // @include bd(green);
+                        flex: 1 1 150px;
+                        min-width: 200px;
+
+                        @media (max-width: 445px) {
+                            @include flex($jfy: center, $align: center);
+                            // @include bd;
+                            @include mg(0.5rem 0);
+                        }
+                    }
+                }
+
+                &:not(:first-of-type) {
+                    --gap: 2rem;
+                }
+            }
+        }
+    }
+
+    &sm- {
+        &list-container {
+            @include flex($jfy: flex-end, $align: center);
+        }
+
+        &link {
+            width: 1.25rem;
+        }
+    }
+
+    &list-container {
+        // @include bd;
+        flex: 1 1 200px;
+        // @include flex($jfy: center, $align: center);
+
+        // @media (max-width: 329px) {
+        @media (max-width: 460px) {
+            @include ta(center);
+        }
+    }
+
+    &list-item:first-of-type {
+        // @include bd;
+        @include mg(1.5rem 0);
+        color: $dark-grayish-violet;
+
+        & > h4 {
+            font-family: "Karla", sans-serif;
+            font-weight: $weight700;
+            font-size: 0.85rem;
+        }
+    }
+
+    &list-item:not(:first-of-type) {
+        // @include bd;
+        @include mg(1rem 0 0);
+    }
+
+    &list-item:last-of-type {
+        // @include bd(blue);
+        // @include mg(1rem 0 0);
+    }
+
+    &link {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

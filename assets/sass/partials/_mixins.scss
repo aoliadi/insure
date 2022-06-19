@@ -1,0 +1,21 @@
+@mixin bd($color: red, $width: 1px, $type: solid) {
+    border: $width $type $color;
+}
+
+@mixin mg($mg...) {
+    margin: $mg;
+}
+
+@mixin pdg($pdg...) {
+    padding: $pdg;
+}
+
+@mixin ta($pos) {
+    text-align: $pos;
+}
+
+@mixin flex($flow: row wrap, $jfy: center, $align: center) {
+    flex-flow: $flow;
+    justify-content: $jfy;
+    align-items: $align;
+}

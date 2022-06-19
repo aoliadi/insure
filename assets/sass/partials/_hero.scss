@@ -1,0 +1,88 @@
+.header__ {
+    &container {
+        max-width: 1440px;
+        color: $white;
+        background-color: $dark-violet;
+        // @include bd(red, $width: 5px);
+        // display: none;
+    }
+
+    &hero-container {
+        position: relative;
+        // @include bd(yellow);
+        max-width: calc((90 / 100) * 1200px);
+
+        @media (min-width: $small-screen) {
+            @include pdg(3rem 0);
+        }
+
+        // width: 100%;
+        // padding: 2rem;
+    }
+
+    &img-container {
+        @media (min-width: $small-screen) {
+            // @include bd;
+            position: absolute;
+            z-index: 1;
+            right: 0;
+            top: 7.6rem;
+            // display: none;
+        }
+    }
+
+    &content-container {
+        position: relative;
+        // @include bd($color: blue);
+        // background: url("../images/bg-pattern-intro-left-mobile.svg") top left no-repeat;
+        background-color: $dark-violet;
+        @extend %container-pdg;
+        @include ta(center);
+        max-width: calc((90 / 100) * 1200px);
+        @include mg(0 auto);
+        
+
+        @media (min-width: $small-screen) {
+            // background-image: url("../images/bg-pattern-intro-right-desktop.svg");
+            // @extend %container-pdg;
+            // padding: 5rem 0;
+
+            & > div {
+                @include bd(purple);
+                width: 45%;
+                max-width: 550px;
+                @include ta(left);
+                // margin-left: ;
+
+                & a {
+                    // @include bd;
+                    @include ta(center);
+                    @include mg(0);
+                }
+            }
+        }
+    }
+
+    &bg-- {
+        &mobile {
+            position: absolute;
+            right: 0;
+            bottom: -32%;
+        }
+    }
+
+    &heading {
+        // @include bd(green);
+        @include mg(0 auto);
+        position: relative;
+    }
+
+    &copy {
+        font-size: 1rem;
+        @include mg(0.85rem 0 1.7rem);
+        // @include bd;
+    }
+}
+
+// font-family: 'DM Serif Display', serif;
+// font-family: 'Karla', sans-serif;
